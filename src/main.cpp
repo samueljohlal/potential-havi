@@ -8,7 +8,7 @@ int main()
     //definisikan solvernya
     Solver solve(20,20);
     //set domainnya (ini dalam meter ya)
-    solve.setextents(0.1,0.05,0.1,0.05); 
+    solve.setextents(0.15,0.05,0.15,0.05);
     //set parameter 
     solve.setParam(1000, 0.01);
 
