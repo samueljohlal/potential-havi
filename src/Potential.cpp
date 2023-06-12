@@ -140,7 +140,7 @@ double Solver::gaussFunc(double z, double r, double cz, double cr, double varz, 
     // definisi di bawah belum tentu tepat juga sih
     double partz = ((z - cz) * (z - cz)) / (2 * varz * varz);
     double partr = ((r - cr) * (r - cr)) / (2 * varr * varr);
-    double fung = -1*(exp(-(partz + partr)) / (exp(0)));
+    double fung = (exp(-(partz + partr)) / (exp(0)));
     return fung;
 }
 
