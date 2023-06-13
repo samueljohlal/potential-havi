@@ -10,7 +10,8 @@
 //setor konstanta yang kira-kira akan dipakai di sini
 namespace Const
 {
-    const double EPS_0 = 8.8541878e-12; //epsilon nol
+    //const double EPS_0 = 8.8541878e-12; //epsilon nol
+    const double EPS_0 = 1; //epsilon nol
     const double QE = 1.602176565e-19; //muatan elektron coulomb (tanda masih positif)
     const double AMU = 1.660538921e-27; //atomic mass unit kg
     const double ME = 9.10938215e-31; //massa elektron kg
