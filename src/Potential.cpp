@@ -85,7 +85,7 @@ bool Solver::solveGS()
                     // ini nggak sesederhana itu ya, karena rumus aslinya referensinya (j=0) itu ya di sumbu z.
                     double crj = 0.5 / ((this->x0[1] + j * this->dh[0]) * this->dh[0]);
                     // double phi_baru = crz*( (rho[i][j]/EPS_0) + idz2*(phi[i+1][j] + phi[i-1][j]) + phi[i][j+1]*(idr2 + 0.5*idr2/j) + phi[i][j-1]*(idr2 - 0.5*idr2/j) );
-                    double phi_baru = crz * ((this->rho[i][j] / Const::EPS_0) + idz2 * (this->phi[i + 1][j] + this->phi[i - 1][j]) + this->phi[i][j + 1] * (idr2 + crj) + this->phi[i][j - 1] * (idr2 - crj));
+                    double phi_baru = crz * ((this->rho[i][j] / Const::EPS_0) + (idz2 * (this->phi[i + 1][j] + this->phi[i - 1][j])) + (this->phi[i][j + 1] * (idr2 + crj)) + (this->phi[i][j - 1] * (idr2 - crj)));
                     // lanjutkan dengan SOR
                     phi[i][j] += 1.4 * (phi_baru - this->phi[i][j]);
                 }
