@@ -146,8 +146,8 @@ double Solver::gaussFunc(double z, double r, double cz, double cr, double varz, 
 
 void Solver::writeMult(int sz, int sr, int vz, int vr)
 {
-    ofstream gout("rhomult.csv"); // anggap file input (rapat muatan)
-    ofstream fout("outmult.csv"); // file output (distribusi tegangan)
+    ofstream gout("rho_gaussian_silinder.csv"); // anggap file input (rapat muatan)
+    ofstream fout("phi_gaussian_silinder.csv"); // file output (distribusi tegangan)
 
     // tentukan lebar langkahnya dulu
     double dvz = (xm[0] - x0[0]) / (sz - 1);
