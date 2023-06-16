@@ -141,8 +141,8 @@ void Solver::setRhoGaussian(int nz, int nr)
 double Solver::gaussFunc(double z, double r, int nz, int nr)
 {
     // definisi di bawah belum tentu tepat juga sih
-    double partz = sin((nz * Const::PI * z)/this->L[0]);
-    double partr = sin((nr * Const::PI * r)/this->L[1]);
+    double partz = sin((nz * Const::PI * (z-zmin))/this->L[0]);
+    double partr = sin((nr * Const::PI * (r-rmin))/this->L[1]);
     double fung = partz * partr;
     return fung;
 }
